@@ -16,7 +16,23 @@ a {
     text-decoration: none;
 }
 
-
+.form-control::placeholder{
+    color: #6C757D;
+}
+.form-control:focus{
+    border-color: var(--main-color);
+    box-shadow: none;
+    color: var(--main-color);
+}
+/* side arrow back to top */
+.back-to-top{
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+}
 /* side Navbar */
 .sideNav {
     z-index: 999;
@@ -59,9 +75,7 @@ a {
     background: transparent;
     border: 2px solid var(--main-color);
 }
-.searchInput::placeholder{
-    color: #6C757D;
-}
+
 .form-control:focus{
     background-color: transparent;
 }
@@ -79,4 +93,16 @@ a {
     position: absolute;
     resize: 0;
 
+}
+/* contact section */
+#contact .form-control{
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    border-bottom:1px solid #fff ;
+}
+#contact input::placeholder{
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
 }

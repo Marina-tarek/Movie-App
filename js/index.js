@@ -1,6 +1,12 @@
 /// <reference types="../@types/jquery" />
 
 let rowData = document.getElementById('rowData')
+// ----> scroll to top
+$(".back-to-top").on("click",function(){
+        $("html, body").animate({
+          scrollTop: 0
+        }, 500)
+})
 // --->side nav
 $(".open-close-tap").on("click", function tap() {
     $(".nav-content").animate({ width: 'toggle' }, 500)
@@ -22,20 +28,20 @@ function hideMenuItems() {
         $(".nav-links li").removeAttr("style")
     }
 }
-
-$("#nowPlaying").on("click",function(){
-    movie()
+// ----->
+$('a[href^="#"]').on("click", function (e) {
+    let aHref = e.target.getAttribute("href").slice(1)
+  console.log(aHref);
+  movies(aHref)
 })
-async function movie() {
-    
-    let response = await fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=eba8b9a7199efdcb0ca1f96879b83c44`)
+async function movies(href){
+    let response = await fetch(`https://api.themoviedb.org/3/movie/${href}?api_key=eba8b9a7199efdcb0ca1f96879b83c44`)
     let data = await response.json()
     
     console.log(data.results);
-    display(data.results)
+    display(data.results) 
 }
 
-var imgList = Array.from(document.querySelectorAll('.inner img'));//! nodeList
 function display(array){
     let cartona = ``
 for (let i = 0; i < array.length; i++) {
@@ -61,5 +67,6 @@ $("#img-info").on("mouseleave",function(){
     $("#img-content").animate({ width: '0' }, 500)
 })
 }
+
 
 
