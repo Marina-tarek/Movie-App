@@ -1,0 +1,82 @@
+:root{
+    --main-bg-color: #0D0D0D;
+    --main-color: #f9f6f6;
+}
+body {
+    background-color: var(--main-bg-color);
+    color: #f9f6f6 !important;
+    /* overflow: hidden; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.pointer,i {
+    cursor: pointer;
+}
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+
+/* side Navbar */
+.sideNav {
+    z-index: 999;
+}
+
+.nav-content {
+    padding: 0 30px;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+    display: none;
+}
+
+.nav-links ul {
+    overflow: hidden;
+}
+
+.nav-links li {
+    padding-top: 25px;
+    position: relative;
+    /* top: 300px; */
+    transition: top 0.3s;
+}
+
+.nav-links li.show {
+    top: 0;
+}
+
+.nav-header {
+    background-color: var(--main-color);
+}
+.logo{
+    height: 48px;
+}
+
+/* main section */
+.searchInput{
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+.searchInput::placeholder{
+    color: #6C757D;
+}
+.form-control:focus{
+    background-color: transparent;
+}
+
+
+/*  */
+
+#img-content{
+    top: 0;
+    width: 0;
+    overflow: hidden;
+}
+.layer{
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    resize: 0;
+
+}
