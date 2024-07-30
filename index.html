@@ -12,12 +12,16 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- link css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- loading screen -->
-     
+     <section id="loading">
+        <span class="loader"></span>
+     </section>
+  
     <!-- side navbar -->
     <nav class="sideNav position-fixed d-flex top-0 vh-100">
         <div class="nav-content vh-100">
@@ -44,18 +48,18 @@
                     </ul>
                 </div>
                 <div class="nav-footer">
-                    <div class="social mb-2">
-                        <a onfocus="" href="https://www.facebook.com/" target="_blank"><i
-                                class="fa-brands fa-facebook"></i></a>
-                        <a href="https://x.com/?lang=en" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://globle-game.com/" target="_blank"> <i class="fa-solid fa-globe"></i></a>
+                    <div class="social mb-3">
+                        <a onfocus="" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook ps-3"></i></a>
+                        <a href="https://x.com/?lang=en" target="_blank"><i class="fa-brands fa-twitter ps-3"></i></a>
+                        <a href="https://globle-game.com/" target="_blank"> <i class="fa-solid fa-globe ps-3"></i></a>
 
                     </div>
                     <div class="footer">
-                        <p>Copyright Â© 2019 All Rights
+                        <p>Copyright Â© 2024 All Rights
                             <br>
                             Reserved.
                         </p>
+                        <p>Created by <a href="https://github.com/Marina-tarek" class="link fw-bold"> Marina Tarek</a></p>
                     </div>
                 </div>
             </div>
@@ -63,10 +67,10 @@
 
         <div class="nav-header px-2 d-flex flex-column justify-content-between text-center px-2 py-4">
             <img src="image/logo.png" alt="movie icon" class="logo">
-            <i class="fa-solid fa-align-justify text-black fs-3 open-close-tap"></i>
-            <div>
-                <i class="fa-solid fa-globe text-black"></i>
-                <i class="fa-solid fa-share-nodes text-black d-block"></i>
+            <i class="fa-solid fa-align-justify fs-3 open-close-tap"></i>
+            <div class="social-media">
+                <i class="fa-solid fa-globe"></i>
+                <i class="fa-solid fa-share-nodes d-block"></i>
             </div>
 
 
@@ -81,9 +85,12 @@
     <main>
 <section class="movie-section">
     <div class="container py-5 ">
-        <input type="text" class="form-control searchInput w-50 m-auto rounded-pill" placeholder="Search">
-        <!-- <i class="fa-solid fa-xmark"></i> -->
-        <div class="row g-4 mt-3 " id="rowData"></div>
+        <div class="searchSeaction position-relative">
+            <input type="text" class="form-control searchInput m-auto rounded-pill" placeholder="Search">
+        <i class="fa-solid fa-xmark position-absolute clearIcon d-none"></i>
+        </div>
+        
+        <div class="row g-4 gy-3 mt-3 justify-content-around" id="rowData"></div>
     </div>
 </section>
         <!-- contact us  -->

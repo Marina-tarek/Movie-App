@@ -5,7 +5,7 @@
 body {
     background-color: var(--main-bg-color);
     color: #f9f6f6 !important;
-    /* overflow: hidden; */
+    overflow: hidden;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .pointer,i {
@@ -24,6 +24,38 @@ a {
     box-shadow: none;
     color: var(--main-color);
 }
+/* loading screen */
+#loading{
+    background-color: var(--main-bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid var(--main-color);
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
 /* side arrow back to top */
 .back-to-top{
     background-color: #000;
@@ -55,7 +87,7 @@ a {
 .nav-links li {
     padding-top: 25px;
     position: relative;
-    /* top: 300px; */
+    top: 300px;
     transition: top 0.3s;
 }
 
@@ -69,13 +101,28 @@ a {
 .logo{
     height: 48px;
 }
-
+.open-close-tap,.social-media li{
+    color: var(--main-bg-color);
+}
+.link{
+    color: #dc3545;
+}
+.link:hover{
+  color: #b02a37;
+}
 /* main section */
 .searchInput{
+    width: 50%;
     background: transparent;
     border: 2px solid var(--main-color);
 }
+.clearIcon{
+    top: 10px;
+    right: 27%;
+    color: #395F9F;
 
+
+}
 .form-control:focus{
     background-color: transparent;
 }
@@ -83,17 +130,6 @@ a {
 
 /*  */
 
-#img-content{
-    top: 0;
-    width: 0;
-    overflow: hidden;
-}
-.layer{
-    background-color: rgba(0,0,0,0.6);
-    position: absolute;
-    resize: 0;
-
-}
 /* contact section */
 #contact .form-control{
     border: none;
@@ -105,4 +141,20 @@ a {
     text-align: center;
     font-weight: 500;
     font-size: 18px;
+}
+/* media  */
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px){
+    .nav-header{
+        background-color: transparent;
+    }
+    .logo,.social-media{
+        opacity: 0;
+    }
+    .open-close-tap{
+        color: var(--main-color);
+    }
+    .searchInput{
+        width: 80%;
+    }
 }

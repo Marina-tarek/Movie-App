@@ -1,0 +1,39 @@
+#img-info{
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+#img-info img{
+    transition: all 0.3s;
+}
+#img-info:hover img{
+    transform: rotate(9deg) scale(1.4);
+    
+}
+.layer{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    padding: 20px;
+
+    /* opacity: 0; */
+    /* transform: translatex(-100%); */
+
+}
+/* #img-info:hover .layer{
+    opacity: 1;
+    transform: translatex(100%);
+
+
+} */
+ .votingNum{
+    border: 2px solid green;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+ }
+
